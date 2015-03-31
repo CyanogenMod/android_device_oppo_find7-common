@@ -19,25 +19,11 @@ import /init.qcom-common.rc
 on fs
     mount_all ./fstab.qcom
     restorecon_recursive /persist
-    setprop ro.crypto.fuse_sdcard true
 
 on init
-    # See storage config details at http://source.android.com/tech/storage/
-    chmod 0701 /mnt/media_rw
-    mkdir /mnt/media_rw/sdcard0 0775 system system
-    mkdir /mnt/media_rw/sdcard1 0775 system system
-    mkdir /mnt/media_rw/usbdisk 0700 media_rw media_rw
-
-    mkdir /storage/sdcard0 0000 system system
-    mkdir /storage/sdcard1 0000 system system
-    mkdir /storage/usbdisk 0700 root root
-
-    export EXTERNAL_STORAGE /storage/sdcard0
-    export SECONDARY_STORAGE /storage/sdcard1:/storage/usbdisk
-
     # Support legacy paths
-    symlink /storage/sdcard0 /sdcard
-    symlink /storage/sdcard0 /mnt/sdcard
+    symlink /sdcard /mnt/sdcard
+    symlink /sdcard /storage/sdcard0
 
 on boot
     # For find7s notification LED
@@ -58,16 +44,3 @@ on post-fs-data
     # Torch
     chown system camera /sys/devices/qcom,camera-led-flash.81/test
     chmod 0660 /sys/devices/qcom,camera-led-flash.81/test
-
-service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sdcard0 /storage/sdcard0
-    class late_start
-    disabled
-
-service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sdcard1 /storage/sdcard1
-    class late_start
-    disabled
-
-service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
-    class late_start
-    disabled
-
