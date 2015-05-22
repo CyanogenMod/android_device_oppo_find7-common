@@ -7,10 +7,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.camera.facialproc=true \
     ro.qc.sdk.gestures.camera=false \
+    ro.qti.ir_proximity=true \
     ro.qti.sdk.sensors.gestures=true \
     ro.qti.sensors.bte=true \
     ro.qti.sensors.gtap=true \
-    ro.qti.sensors.vmd=true \
+    ro.qti.sensors.vmd=true
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
