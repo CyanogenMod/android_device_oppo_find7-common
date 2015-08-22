@@ -17,9 +17,6 @@
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# System properties
--include $(LOCAL_PATH)/system_prop.mk
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
