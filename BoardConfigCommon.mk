@@ -47,7 +47,5 @@ TARGET_SYSTEM_PROP += device/oppo/find7-common/system.prop
 # Recovery
 TARGET_RECOVERY_FSTAB := device/oppo/find7-common/rootdir/etc/fstab.qcom
 
-AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
-
 # Inherit from the proprietary version
 -include vendor/oppo/find7-common/BoardConfigVendor.mk
