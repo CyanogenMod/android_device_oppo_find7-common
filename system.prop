@@ -18,3 +18,6 @@ ro.gps.agps_provider=1
 
 # CABL is handled by the panel
 ro.qualcomm.cabl=0
+
+# By default, primary storage is physical
+ro.vold.primary_physical=1

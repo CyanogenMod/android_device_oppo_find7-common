@@ -25,9 +25,6 @@ on init
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
 
-    # By default, primary storage is physical
-    setprop ro.vold.primary_physical 1
-
 on boot
     # For find7s notification LED
     chown system system /sys/class/leds/led:rgb_red/brightness
