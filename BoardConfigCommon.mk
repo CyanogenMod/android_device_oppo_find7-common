@@ -26,6 +26,9 @@ TARGET_KERNEL_CONFIG := cyanogenmod_find7_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 TARGET_KERNEL_SOURCE := kernel/oppo/msm8974
 
+# Audio
+AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oppo/find7-common/bluetooth
 
