@@ -18,12 +18,16 @@ import /init.qcom-common.rc
 
 on fs
     mount_all ./fstab.qcom
+    swapon_all ./fstab.qcom
+
     restorecon_recursive /persist
 
 on init
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
+
+    write /proc/sys/vm/page-cluster 0
 
 on boot
     # For find7s notification LED
