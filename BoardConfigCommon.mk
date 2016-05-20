@@ -50,7 +50,7 @@ COMMON_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
 COMMON_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_find7
+TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/oppo/find7-common/init/init_find7.cpp
 
 # Properties
 TARGET_SYSTEM_PROP += device/oppo/find7-common/system.prop

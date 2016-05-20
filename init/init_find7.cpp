@@ -34,6 +34,8 @@
 #include "log.h"
 #include "util.h"
 
+#include "init_msm8974.h"
+
 static void import_kernel_nv(char *name, int for_emulator)
 {
     char *value = strchr(name, '=');
@@ -50,7 +52,7 @@ static void import_kernel_nv(char *name, int for_emulator)
     }
 }
 
-void vendor_load_properties()
+void init_target_properties()
 {
     import_kernel_cmdline(0, import_kernel_nv);
 }
