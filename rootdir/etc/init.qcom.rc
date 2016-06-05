@@ -40,8 +40,3 @@ on boot
     chown system system /sys/class/leds/led:rgb_blue/ramp_step_ms
     chown system system /sys/class/leds/led:rgb_blue/duty_pcts
     chown system system /sys/class/leds/led:rgb_blue/blink
-
-on post-fs-data
-    # Torch
-    chown system camera /sys/devices/qcom,camera-led-flash.81/test
-    chmod 0660 /sys/devices/qcom,camera-led-flash.81/test
