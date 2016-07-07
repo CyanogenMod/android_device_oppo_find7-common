@@ -56,7 +56,7 @@ TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/oppo/find7-common/init/init_find7.
 TARGET_SYSTEM_PROP += device/oppo/find7-common/system.prop
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/oppo/find7-common/rootdir/etc/fstab.recovery
+TARGET_RECOVERY_FSTAB := device/oppo/find7-common/rootdir/etc/fstab.qcom
 
 # Inherit from the proprietary version
 -include vendor/oppo/find7-common/BoardConfigVendor.mk
