@@ -23,7 +23,6 @@ TARGET_SPECIFIC_HEADER_PATH += device/oppo/find7-common/include
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3
 TARGET_KERNEL_CONFIG := cyanogenmod_find7_defconfig
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 TARGET_KERNEL_SOURCE := kernel/oppo/msm8974
 
 # Audio
